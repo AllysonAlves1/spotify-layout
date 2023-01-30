@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
+
+body {
+    background-color: #1D232A;
+    font-family: 'Open Sans', 'icones', sans-serif;
+    color: #fff;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4em;
+    padding: 0 1em;
+    background-color: #2C343A;
+}
+
+.logo {
+    width: 10em;
+    height: 5em;
+}
+
+.redes-sociais {
+    display: flex;
+    align-items: center;
+    margin: 0 1em;
+}
+
+.redes-sociais img {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 1em;
+}
+
+.principal {
+    display: grid;
+    grid-template-areas:
+        "titulo-pagina"
+        "destaque-album"
+        "secao-albuns"
+        "secao-artistas"
+        "secao-formulario"
+    ;
+    padding: 2em 5em;
+    row-gap: 2em;
+}
+
+.container {
+    background-color: #2C343A;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.titulo-pagina {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.titulo-secao-albuns {
+    font-size: 2em;
+    font-weight: 700;
+    grid-column: span 4;
+    text-align: center;
+}
+
+.titulo-secao-artistas {
+    font-size: 2em;
+    font-weight: 700;
+    grid-column: span 5;
+    text-align: center;
+}
+
+.cartao {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #2C343A;
+}
+
+.cartao__principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(../img/alok_capa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+.cartao__imagem--principal{
+    width: 50vw;
+}
+
+.cartao__conteudo {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 2em;
+    gap: 1em;
+}
+
+.cartao__conteudo--menor {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    align-items: center;
+}
+
+.cartao__destaque{
+    grid-column: span 2;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.cartao__titulo {
+    grid-column: span 2;
+    font-size: 6em;
+    font-weight: 700;
+    padding-bottom: .5em;
+}
+
+.cartao__perfil {
+    grid-column: span 2;
+    font-size: 0.9em;
+}
+
+.cartao__info {
+    display: flex;
+    align-items: center;
+}
+
+.cartao__info--visualizacao::before {
+    content: "\e90f";
+    margin-right: 8px;
+}
+
+.cartao__botao--destaque {
+    width: 100%;
+    grid-column: 2;
+    padding: 16px 8px;
+}
+
+.cartao__titulo--menor {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.cartao__perfil--menor {
+    grid-column: span 2;
+    color: #95999C;
+    font-size: 0.9em;
+}
+
+.cartao__info--menor {
+    display: flex;
+    align-items: center;
+    color: #95999C;
+    font-size: .875em;
+}
+
+.cartao__botao--menor {
+    width: 100%;
+    grid-column: 2;
+    padding: 16px 8px;
+}
+
+.cartao__info--tempo::before {
+    content: "\e90c";
+    margin-right: 8px;
+}
+
+.cartao__botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0480DC;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 0.9em;
+}
+
+.cartao__botao--play::before {
+    content: "\e90b";
+    font-size: 24px;
+}
+
+.cartao__botao--destaque::before {
+    margin-right: 8px;
+}
+
+.secao {
+    display: grid;
+    gap: 16px;
+    row-gap: 2em;
+}
+
+.destaque-album {
+    grid-area: destaque-album;
+}
+
+.secao-albuns {
+    grid-area: secao-albuns;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.secao-artistas {
+    grid-area: secao-artistas;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.secao-formulario {
+    grid-area: secao-formulario;
+}
+
+.cartao__info--formulario {
+    text-align: center;
+    color: #95999C;
+    font-size: .875em;
+    padding-top: .5em;
+}
+
+.titulo-secao-formulario {
+    grid-column: span 5;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+    margin: 0 20em;
+}
+
+.formulario-msg {
+    grid-column: span 2;
+}
+
+.formulario-botao {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: .875em;
+    font-weight: 700;
+}
+
+.input-box input, textarea {
+    margin: 0.625em 0;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #00001c;
+    color: #00001c;
+}
+
+.input-box input:hover,textarea:hover {
+    background-color: #eeeee7;
+}
+
+textarea {
+    height: 10em;
+}
+
+.cartao__botao--formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0480DC;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    padding: 16px 8px;
+}
+
+.footer {
+    font-size: .875em;
+    font-family: sans-serif;
+    margin-right: 1em;
+}
